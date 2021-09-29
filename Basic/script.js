@@ -111,7 +111,7 @@ class Animal {
         this.Pet=p;
     }
     PrintInfo(){
-        console.log(`This is a ${this.Species}`);
+        return `This is a ${this.Species}, its color is ${this.color}, it has ${this.Legs} and lives in ${this.Habitat}.`
     }
 }
 
@@ -166,3 +166,23 @@ class Profession extends Person {
 let person1 = new Profession('Aron','Doe', 33, 'blond','it specialist');
 
 document.write(person1.printOut());
+
+class fish extends Animal{
+    
+    watertype;
+
+    constructor(s,c,l,f,p,g){
+        super(s,c,l,f,p);
+        this.Habitat = "water";
+        this.watertype = g;
+    }
+
+    PrintInfo(){
+        return `This is a ${this.Species}, its color is ${this.color}, it has ${this.Legs} legs and lives in ${this.watertype} ${this.Habitat}.`
+    }
+}
+
+
+let fishy = new fish('carp', 'brown', 0, 'worms',false, 'fresh');
+
+document.write(fishy.PrintInfo());
