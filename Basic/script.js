@@ -74,13 +74,7 @@ class car{
     }
 
     printCard() {
-       return `<div class="card" style="width: 18rem;">
-  <img src="${this.image}"" class="card-img-top" alt="car">
-  <div class="card-body">
-    <h5 class="card-title"> ${this.brand}</h5>
-    <p class="card-text"> fancy text</p>
-  </div>
-</div>`;
+       return `<img src=${this.image} class="card-img-top" alt="car">`;
 
     }
 }
@@ -100,5 +94,6 @@ class animal{
     }
 }
 
-let car1 = new car("volvo", "red", "W2323", true,"car.jpg");
+let car1 = new car("volvo", "red", "W2323", true,"pic.jpg");
+
 car1.printCard();
