@@ -90,7 +90,7 @@ class car{
     }
 }
 
-let MahmoodsCar = new car("Maybach", "red", "", true, "pic.jpg");
+let MahmoodsCar = new car("Maybach", "red", "", true, "/Basic/img/pic.jpg");
 
 document.getElementById("demo2").innerHTML = MahmoodsCar.printCar();
 
@@ -132,7 +132,7 @@ class Motorbike extends car {
     }
 }
 
-let bike1 = new Motorbike("volvo", "green", "", true, "pic.jpg", 2);
+let bike1 = new Motorbike("volvo", "green", "", true, "/Basic/img/pic.jpg", 2);
 document.getElementById("demo4").innerHTML = bike1.printCar();
 
 class Person {
