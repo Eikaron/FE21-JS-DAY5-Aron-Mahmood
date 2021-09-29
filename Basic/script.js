@@ -2,15 +2,16 @@
 
 let human1 = {
     fName: "Aron",
+    lastname: "Faulhaber",
     age: 30,
     eyecolor: "green",
     covid: false,
+
 
     somefunction(){
         console.log(`My name is ${this.fName} and I am ${this.age} years old.`);
     }
 }
-
 
 let human2 = {
     fName: "Marina",
@@ -32,9 +33,15 @@ let human3 = {
 
     somefunction(){
         console.log(`My name is ${this.fName} and I am ${this.age} years old.`);
+        document.getElementById("demo").innerHTML = `My name is ${this.fName} and I am ${this.age} years old.`
     }
 }
 
+myArray = [human1, human2, human3];
+
+for (val of myArray){
+    val.somefunction();
+}
 
 
 let pet = {
@@ -42,9 +49,6 @@ let pet = {
     petname: "Theo",
     age: 8,
     goodboy: true,
-
-    printPet() {
-    }
 }
 
 let vehicle = {
@@ -70,30 +74,22 @@ class car{
         this.plate = p;
         this.ecar = e;
         this.image = i;
-
     }
 
-    printCard() {
-       return `<img src=${this.image} class="card-img-top" alt="car">`;
+    printCar() {
 
-    }
-}
+        return `<div class="card" style="width: 18rem;">
+        <img src="${this.image}" class="card-img-top" alt="Car">
+        <div class="card-body">
+          <h5 class="card-title">${this.brand} in ${this.color}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Mahmoods Car</a>
+        </div>
+      </div>`
 
-
-class animal{
-    brand;
-    color;
-    plate;
-    ecar;
-
-    constructor(b, c, p, e){
-        this.brand = b;
-        this.color = c;
-        this.plate = p;
-        this.ecar = e;
     }
 }
 
-let car1 = new car("volvo", "red", "W2323", true,"pic.jpg");
+let MahmoodsCar = new car("Maybach", "red", "", true, "pic.jpg");
 
-car1.printCard();
+document.getElementById("demo2").innerHTML = MahmoodsCar.printCar();
