@@ -111,7 +111,14 @@ class Animal {
         this.Pet=p;
     }
     PrintInfo(){
-        return  `This is ${Species}`
+        console.log(`This is a ${this.Species}`);
     }
 }
+
+let Animal1 = new Animal("cat", "calico",4,"land", "carnivore", true);
+
+Animal1.PrintInfo();
+
+
+
 
