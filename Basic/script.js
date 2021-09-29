@@ -93,3 +93,25 @@ class car{
 let MahmoodsCar = new car("Maybach", "red", "", true, "pic.jpg");
 
 document.getElementById("demo2").innerHTML = MahmoodsCar.printCar();
+
+
+class Animal {
+    Species;
+    color;
+    Legs;
+    Habitat;
+    Food;
+    Pet;
+    constructor(s,c,l,h,f,p){
+        this.Species=s;
+        this.color=c;
+        this.Legs=l;
+        this.Habitat=h;
+        this.Food=f;
+        this.Pet=p;
+    }
+    PrintInfo(){
+        return  `This is ${Species}`
+    }
+}
+
