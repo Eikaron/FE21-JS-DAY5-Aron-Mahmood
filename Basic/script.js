@@ -120,5 +120,19 @@ let Animal1 = new Animal("cat", "calico",4,"land", "carnivore", true);
 Animal1.PrintInfo();
 
 
+//Exercise Intermediate 1
+
+class Motorbike extends car {
+
+    wheels;
+
+    constructor(b, c, p, e, i, w){
+        super(b,c,p,e,i);
+        this.wheels = w;
+    }
+}
+
+let bike1 = new Motorbike("volvo", "green", "", true, "pic.jpg", 2);
+document.getElementById("demo4").innerHTML = bike1.printCar();
 
 
