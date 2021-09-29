@@ -135,4 +135,21 @@ class Motorbike extends car {
 let bike1 = new Motorbike("volvo", "green", "", true, "pic.jpg", 2);
 document.getElementById("demo4").innerHTML = bike1.printCar();
 
+class Person {
+    Fname;
+    Lname;
+    age;
+    hairColor;  
+
+    constructor(a,b,c,d){
+        this.Fname=a;
+        this.Lname=b;
+        this.age=c;
+        this.hairColor=d;
+    }
+    printOut(){
+        console.log(` the first name is : ${this.Fname} and the last Name is : ${this.Lname} and im ${this.age} and i have a nice ${this.hairColor} hair);
+    }
+}
+
 
