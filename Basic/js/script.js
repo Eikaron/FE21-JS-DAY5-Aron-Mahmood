@@ -186,3 +186,4 @@ class fish extends Animal{
 let fishy = new fish('carp', 'brown', 0, 'worms',false, 'fresh');
 
 document.write(fishy.PrintInfo());
+
