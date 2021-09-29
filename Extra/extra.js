@@ -14,13 +14,15 @@ class Hotel {
         showAvailability(nights){
 
             if(this.numberOfNights>nights){
-                return  <button value="I'll reserve"></button>
+                return `<button type="button" class="btn btn-primary"> I'll reserve </button><img src="${this.image}">`
 
             }else{
-                return  `<button value="Sorry, no available nights for ${hotelName}></button> `
+                return `<button type="button" class="btn btn-primary"> Sorry, no nights left at
+                 ${this.hotelName}!</button> <img src="${this.image}">`
 
             }
         }
 }
 
-Hotel1= new Hotel("holdayInn","Vienna",)
+let Hotel1= new Hotel("holdayInn","Vienna","img/hotel1.jpg");
+document.getElementById("somebutton").innerHTML = Hotel1.showAvailability(4);
