@@ -148,8 +148,21 @@ class Person {
         this.hairColor=d;
     }
     printOut(){
-        console.log(` the first name is : ${this.Fname} and the last Name is : ${this.Lname} and im ${this.age} and i have a nice ${this.hairColor} hair);
+        return `<div class="bg-warning border border-1 w-25 mt-3">
+        <h5 class='text-center'> This is ${this.Fname} ${this.Lname}! <h5> </div>`;
     }
 }
 
+class Profession extends Person {
+    profession;
 
+    constructor(a,b,c,d,e){
+        super(a,b,c,d);
+        this.profession = e;
+    }
+
+}
+
+let person1 = new Profession('Aron','Doe', 33, 'blond','it specialist');
+
+document.write(person1.printOut());
